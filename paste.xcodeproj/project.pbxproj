@@ -27,6 +27,7 @@
 		01A000000000000000000118 /* ThemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000018 /* ThemeSettingsView.swift */; };
 		01A000000000000000000119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000019 /* Assets.xcassets */; };
 		01A000000000000000000120 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000020 /* libsqlite3.tbd */; };
+		01A000000000000000000121 /* Wangcl.icns in Resources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000022 /* Wangcl.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,8 @@
 		01A000000000000000000018 /* ThemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingsView.swift; sourceTree = "<group>"; };
 		01A000000000000000000019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A000000000000000000020 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		01A000000000000000000021 /* paste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A000000000000000000021 /* wangcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wangcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A000000000000000000022 /* Wangcl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Wangcl.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 		01A000000000000000000303 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01A000000000000000000021 /* paste.app */,
+				01A000000000000000000021 /* wangcl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				01A000000000000000000019 /* Assets.xcassets */,
+				01A000000000000000000022 /* Wangcl.icns */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,8 +159,8 @@
 			dependencies = (
 			);
 			name = paste;
-			productName = paste;
-			productReference = 01A000000000000000000021 /* paste.app */;
+			productName = wangcl;
+			productReference = 01A000000000000000000021 /* wangcl.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A000000000000000000119 /* Assets.xcassets in Resources */,
+				01A000000000000000000121 /* Wangcl.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +358,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = paste;
+				INFOPLIST_KEY_CFBundleDisplayName = wangcl;
+				INFOPLIST_KEY_CFBundleIconFile = Wangcl;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,7 +368,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "local.paste";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = wangcl;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -377,7 +382,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = paste;
+				INFOPLIST_KEY_CFBundleDisplayName = wangcl;
+				INFOPLIST_KEY_CFBundleIconFile = Wangcl;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +392,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "local.paste";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = wangcl;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

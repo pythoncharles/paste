@@ -1,4 +1,4 @@
-# paste
+# wangcl
 
 一个本地运行的 macOS 菜单栏剪切板历史 App，使用 SwiftUI + AppKit 实现。
 
@@ -45,6 +45,14 @@ open paste.xcodeproj
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 xcodebuild -project paste.xcodeproj -target paste -configuration Debug build
 ```
+
+## 打包安装镜像
+
+```bash
+./scripts/package_dmg.sh
+```
+
+脚本会生成 `build/wangcl.dmg`。打开 DMG 后，把 `wangcl.app` 拖到 `Applications`，之后从“应用程序”启动；不要直接从 DMG 里长期运行。
 
 ## 本地数据
 

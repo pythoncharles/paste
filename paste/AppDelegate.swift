@@ -43,7 +43,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
 
     private func setupStatusItem() {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        item.button?.image = NSImage(systemSymbolName: "doc.on.clipboard", accessibilityDescription: "paste")
+        item.button?.image = NSImage(systemSymbolName: "doc.on.clipboard", accessibilityDescription: "wangcl")
         item.button?.imagePosition = .imageOnly
         item.button?.target = self
         item.button?.action = #selector(togglePopover)
@@ -135,7 +135,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
             )
         )
         let window = NSWindow(contentViewController: controller)
-        window.title = "paste 设置"
+        window.title = "wangcl 设置"
         window.setContentSize(NSSize(width: 520, height: 520))
         window.styleMask = [.titled, .closable, .miniaturizable]
         window.isReleasedWhenClosed = false
@@ -146,7 +146,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
     }
 
     private func showPreviewPanel(for item: ClipboardItem, rowMidY: CGFloat?) {
-        let panelSize = NSSize(width: 408, height: 396)
+        let panelSize = NSSize(width: 408, height: 520)
 
         let panel = previewPanel ?? NSPanel(
             contentRect: NSRect(origin: .zero, size: panelSize),
@@ -183,7 +183,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
             let minY: CGFloat = 12
             let maxY = max(minY, popoverFrame.maxY - panelSize.height - 12)
             let clampedY = min(max(desiredY, minY), maxY)
-            arrowOffset = min(max(rowScreenY - (clampedY + panelSize.height / 2), -134), 134)
+            arrowOffset = min(max(rowScreenY - (clampedY + panelSize.height / 2), -196), 196)
 
             NSAnimationContext.runAnimationGroup { context in
                 context.duration = panel.isVisible ? 0.18 : 0

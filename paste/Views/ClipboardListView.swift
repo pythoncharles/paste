@@ -14,7 +14,7 @@ struct ClipboardListView: View {
             header
 
             if filteredItems.isEmpty {
-                ContentUnavailableView("暂无剪切板记录", systemImage: "doc.on.clipboard")
+                EmptyStateView(text: "暂无剪切板记录", systemImage: "doc.on.clipboard")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 listContent
@@ -150,7 +150,7 @@ struct ClipboardListView: View {
     private var header: some View {
         VStack(spacing: 10) {
             HStack {
-                Text("paste")
+                Text("wangcl")
                     .font(.headline)
                 Spacer()
                 Button {
@@ -419,7 +419,7 @@ struct ClipboardPreviewBubble: View {
                 Image(nsImage: image)
                     .resizable()
                     .scaledToFit()
-                    .frame(maxWidth: 338, maxHeight: 273)
+                    .frame(maxWidth: 338, maxHeight: 397)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(color: .black.opacity(0.2), radius: 10, y: 6)
             } else {
@@ -610,7 +610,22 @@ private struct ClipboardPreviewSheet: View {
     }
 
     private func emptyPreview(_ text: String) -> some View {
-        ContentUnavailableView(text, systemImage: "exclamationmark.triangle")
+        EmptyStateView(text: text, systemImage: "exclamationmark.triangle")
+    }
+}
+
+private struct EmptyStateView: View {
+    let text: String
+    let systemImage: String
+
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: systemImage)
+                .font(.system(size: 32, weight: .medium))
+            Text(text)
+                .font(.callout)
+        }
+        .foregroundStyle(.secondary)
     }
 }
 
